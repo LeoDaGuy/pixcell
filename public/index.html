@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PixCell</title>
+  <link href="/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <!--Funny sheep thing (could be replaced with loading screen)-->
+  <section id = "sheep">
+    <center>
+      <p id = "sheep-text">
+        From the creators of the legendary <a href = "https://sheep-bot-v2.leoxu2.repl.co/">Sheep Bot</a>
+      </p>
+      <p id = "sheep-loading">Loading...</p>
+    </center>
+  </section>
+
+  <!--Actual start screen-->
+  <section id = "start">
+    <p id = "title">PixCell BETA</p>
+    <div id = "namestuff">
+      <input type="text" id="namefield" placeholder = "What's your name?" maxlength="16">
+      <button id = "joinbutton" class = "btn" onclick = "joinGame();">Join</button>
+    </div>
+  </section>
+
+  
+  <!--Class select-->
+  <section id = "class-select">
+    <div class = "content-area" id = "animal-cell-select">
+      <div class="section hpanel" id = "leftpan" onmouseover = "classhover(1);" onmouseout = "classhover(3);">
+        <div class="background-img">
+          <div class="content-area">
+            <h2>Animal Cell</h2>
+            Cell Membrane (2 upgrades)<br>
+            Cytoplasm (2 upgrades)<br>
+            Nucleus (0 upgrades)<br>
+            Smooth ER (0 upgrades)<br>
+            Rough ER (0 upgrades)<br>
+            Golgi Apparatus (0 upgrades)<br>
+            1 Ribosome<br>
+            3 Vacuoles<br>
+            4 Mitochondria<br>
+            20 Lysosomes<br>
+      
+            <button class="btn btn-area" onclick = "classSelect(1);">
+              Choose
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <div class="section hpanel" id = "rightpan" onmouseover = "classhover(2);" onmouseout = "classhover(4);">
+        <div class="background-img">
+          <div class="content-area" id = "rightcont">
+            <h2>Plant Cell</h2>
+            Cell Membrane (0 upgrades)<br>
+            Cytoplasm (0 upgrades)<br>
+            Nucleus (0 upgrades)<br>
+            Smooth ER (0 upgrades)<br>
+            Rough ER (0 upgrades)<br>
+            Golgi Apparatus (0 upgrades)<br>
+            Cell Wall<br>
+            1 Mitochondria<br>
+            1 Vacuole<br>
+            1 Chloroplast<br>
+            10 Lysosomes<br>
+            
+            <button class="btn btn-area" onclick = "classSelect(2);">
+              Choose
+            </button>
+          </div>
+        </div>
+      </div>
+    <div>
+  </section>
+
+  <section id = "game">
+    <div id = "game-bg">
+      <div id = "character"></div>
+    </div>
+    <div id = "char-orgs-cont">
+
+      
+    <div>ORGANELLES</div>
+    <ul id = "char-orgs">
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        Nothing x0
+      </li>
+    </ul>
+  </div>
+
+
+  <div id = "shop-cont">
+    <div>SHOP</div>
+    <ul id = "shop">
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+      <li>
+        <img src = "assets/img/organelle/nucleus.png">
+        NOTHING<br>0 ATP
+      </li>
+    </ul>
+  </div>
+
+
+    
+    <div id = "minimap">
+      <div id = "dot"></div>
+    </div>
+  </section>
+
+  <section id = "lose">
+    <p id = "lose-title">Defeat</p>
+    <span id = "lose-reason">Your skill issues acted up again</span>
+  </section>
+  
+  <!--Scripts-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>

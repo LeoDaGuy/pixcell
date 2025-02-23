@@ -1,0 +1,469 @@
+@font-face {
+    font-family: "Pixeled";
+    src: url("/assets/font/Pixeled.ttf");
+}
+@font-face {
+    font-family: "TitleFont";
+    src: url("/assets/font/font2.ttf"); /*I don't know why but "font2" cant be renamed to anything else or it'll break so try not to rename it*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Pixeled;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  cursor: url("/assets/img/cursor.png") 20 0, auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img {
+-webkit-user-drag: none;
+-khtml-user-drag: none;
+-moz-user-drag: none;
+-o-user-drag: none;
+user-drag: none;
+}
+
+
+body {
+  overflow: hidden;
+  background-color: #595959;
+}
+
+#sheep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  color: white;
+  font-size: 1.7vw;
+  width: 100vw;
+  height: 100vh;
+}
+
+#sheep-text {
+  opacity: 0;
+}
+
+#sheep-loading {
+  font-size: 0.8vw;
+  position: absolute;
+  left: 45%;
+  bottom: 2vh;
+  opacity: 0;
+}
+
+#sheep a {
+  color: white;
+}
+
+
+
+
+#start {
+  align: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("assets/img/start-bg.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+
+#title {
+  margin-top: 3vh;
+  margin-bottom: 38vh;
+	color: rgb(0, 57, 230);
+	font-size: 6.25vw;
+  font-family: TitleFont;
+	text-align: center;
+	text-shadow: 0 0.1vw 0 rgb(55, 88, 251),
+				 0 0.2vw 0 rgb(55, 88, 251),
+				 0 0.3vw 0 rgb(55, 88, 251),
+				 0 0.4vw 0 rgb(55, 88, 251),
+				 0 0.5vw 0 rgb(55, 88, 251),
+				 0 0.6vw 0 rgb(55, 88, 251);
+}
+
+#namestuff {
+  margin: auto;
+  width: fit-content;
+}
+
+#namefield {
+  font-size: 0.8vw;
+  border: 0.5vw solid black;
+  box-shadow: 
+    inset -4px 2px 1px 1px grey,
+    inset -4px -2px 1px 1px lightgray,
+    inset 4px 0px 1px 1px lightgray;  
+  background-color: white;
+  height: 8vh;
+  padding-left: 1vw;
+  margin-right: 1vw;
+}
+
+.btn {
+  font-size: 0.8vw;
+  height: 9vh;
+  width: 10vw;
+  background: #ffffff;
+  border: 0px;
+  position: relative;
+  box-shadow: 
+    inset -4px 2px 1px 1px grey,
+    inset -4px -2px 1px 1px lightgray,
+    inset 4px 0px 1px 1px lightgray;   
+}
+
+.btn:hover {
+	background-color: #e3e3e3;
+}
+
+.btn:active {
+  top: 0.75vh;
+}
+
+.btn::after {
+  content: '';
+  background: black;
+  position: absolute;
+  left: -5%;
+  top: 0;
+  width: 110%;
+  height: 100%;
+  z-index: -1;
+}
+
+.btn::before {
+  content: '';
+  background: black;
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 122%;
+  z-index: -1;
+}
+
+
+
+
+
+img {
+	height: auto;
+}
+
+.hpanel {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	color: #fff;
+  z-index: 999999999999999999;
+}
+
+#leftpan {
+	left: -80%;
+	width: 67%;
+  -webkit-transform: skew(8deg);
+	-moz-transform: skew(8deg);
+	-o-transform: skew(8deg);
+  transition-duration: 0.7s;
+}
+
+#leftpan .background-img {
+  background-color: #ec1838;
+}
+
+#rightpan {
+	right: -80%;
+	width: 60%;
+	-webkit-transform: skew(8deg);
+	-moz-transform: skew(8deg);
+	-o-transform: skew(8deg);
+  transition-duration: 0.7s;
+}
+
+#rightpan .background-img {
+	background-color: #22d846;
+}
+
+.background-img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  z-index: -2;
+}
+
+#rightpan .content-area {
+  -webkit-transform: skew(-8deg);
+	-moz-transform: skew(-8deg);
+	-o-transform: skew(-8deg);
+}
+
+#leftpan .content-area {
+	text-align: center;
+  width: 35vw;
+  margin: auto;
+	margin-top: 5vh;
+  padding-left: 12vw;
+  -webkit-transform: skew(-8deg);
+	-moz-transform: skew(-8deg);
+	-o-transform: skew(-8deg);
+}
+
+#rightpan .content-area {
+  text-align: center;
+  width: 35vw;
+  margin: auto;
+  margin-top: 5vh;
+  padding-right: 8vw;
+}
+
+.content-area h2 {
+	font-size: 1.9vw;
+  margin-top: 3vh;
+}
+
+.btn-area {
+  margin-top: 10vh;
+}
+
+.btn-area a {
+	width: 70%;
+	text-align: center;
+	text-decoration: none;
+	color: #fa1aff;
+}
+
+
+#game {
+  display: none;
+}
+
+#game-bg {
+  z-index: -4;
+  transition-duration: 0.05s;
+  margin: 0;
+  padding: 0;
+  
+  width: 400vw;
+  height: 400vw;
+
+  position: absolute;
+  top: -10vw;
+  left: -10vw;
+ 
+  background: #f2f2f2;
+  background-size: 20vw 20vw;
+  background-image:
+    linear-gradient(to right, grey 2px, transparent 2px),
+    linear-gradient(to bottom, grey 2px, transparent 2px);
+}
+
+#minimap {
+  opacity: 0.7;
+  width: 10.4vw;
+  height: 10.6vw;
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  background-color: #383838;
+}
+
+#dot {
+  width: 0.6vw;
+  height: 0.6vw;
+  background-color: #000000;
+  position: absolute;
+}
+
+#lose {
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+  opacity: 0;
+}
+
+#lose-title {
+  color: #c70000;
+  margin-top: 5vh;
+  font-size: 10vw;
+}
+
+#lose-reason {
+  color: #c70000;
+  font-size: 2vw;
+}
+
+#character {
+  width: 25em;
+  height: 20%;
+  transform-origin: 7.7em 40%;
+  position: fixed;
+  top: 25em;
+  left: 54.1em;
+  transform: translate(-50em, -50em);
+  display: block;
+  touch-action: none;
+  background-image: url("assets/img/cells/animal.gif");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.enemy {
+  position: absolute;
+  left: 200%;
+  top: 200%;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+.enemy-img {
+  height: 20.5vh;
+  transform-origin: 7.7em 3.8em;
+  display: block;
+}
+
+.enemy-name {
+  display: block;
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+}
+
+#char-orgs-cont {
+  width: 20vw;
+  height: fit-content;
+  position: fixed;
+  right: 0vw;
+  top: 0vh;
+  opacity: 0.7;
+  transition-duration: 0.2s;
+}
+
+#char-orgs-cont:hover {
+  opacity: 0.95;
+}
+
+#char-orgs-cont div {
+  text-align: center;
+  font-size: 0.9vw;
+  padding-top: 1vh;
+  width: 20vw;
+  height: 7vh;
+  background-color: #4d52ff;
+  color: #141414;
+}
+
+#char-orgs {
+  padding: none;
+}
+
+#char-orgs-cont ul {
+  margin: 0;
+  padding: 0;
+  height: 0vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#char-orgs li {
+  list-style-type: none;
+  background-color: #dedede;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5vh solid black;
+}
+
+#char-orgs li img {
+  height: 4.5vh;
+  margin-right: 1vw;
+}
+
+#char-orgs-cont:hover > #char-orgs { height: 43vh; }
+
+
+
+
+#shop-cont {
+  width: 20vw;
+  height: fit-content;
+  position: fixed;
+  left: 0vw;
+  top: 0vh;
+  opacity: 0.7;
+  transition-duration: 0.2s;
+}
+
+#shop-cont:hover {
+  opacity: 0.95;
+}
+
+#shop-cont div {
+  text-align: center;
+  font-size: 0.9vw;
+  padding-top: 1vh;
+  width: 20vw;
+  height: 7vh;
+  background-color: #d53059;
+  color: #141414;
+}
+
+#shop-cont ul {
+  margin: 0;
+  padding: 0;
+  height: 0vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#shop li {
+  list-style-type: none;
+  background-color: #dedede;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5vh solid black;
+}
+
+#shop li:hover {
+  background-color: #bdbdbd;
+}
+
+#shop li img {
+  height: 8vh;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+
+#shop span {
+  display: block;
+  font-size: 0.9vw;
+}
+
+#shop-cont:hover > #shop { height: 75vh; }
